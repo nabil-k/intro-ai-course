@@ -42,9 +42,9 @@ while m <= 10:
             current_pred_income.append(m * i + b)
         
         current_meanSquaredError = meanSquaredError(y,current_pred_income)
-        
+        #print(current_meanSquaredError, m, b)
         if  max_meanSquaredError > current_meanSquaredError:
-            #print(current_meanSquaredError, m, b)
+            
             best_m = m
             best_b = b
             max_meanSquaredError = current_meanSquaredError
