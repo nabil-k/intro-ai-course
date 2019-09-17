@@ -1,8 +1,10 @@
 # Linear Regression Example
-
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import time
+
+start_time =  time.time()
 
 # Getting data
 pd_data = pd.read_csv("icecream.csv") # reads csv file
@@ -66,6 +68,9 @@ for i in range(len(x)):
     plt.plot([x[i], x[i]], [y[i], pred_income[i]], 'r-')
 
 
+run_time = time.time() - start_time
+
+print("run time:", run_time, " s")
 
 plt.show() # shows the graph
 
